@@ -282,8 +282,10 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", sans-serif; font-weight: 600; lin
 .edu-cgpa { color: var(--accent-2); font-weight: 600; }
 .cert-note { color: var(--muted); font-size: .9rem; margin-bottom: 20px; }
 .cert-note a { color: var(--accent-2); border-bottom: 1px solid var(--accent-2); }
-.cert-card h4 { font-size: 1.05rem; margin-bottom: 8px; }
+.cert-card h4 { font-size: 1.05rem; margin-bottom: 6px; }
+.cert-meta { font-family: "JetBrains Mono"; font-size: .74rem; color: var(--accent-2); margin-bottom: 10px !important; letter-spacing: .03em; }
 .cert-card p { color: var(--muted); font-size: .9rem; }
+.cert-card p strong { color: var(--text); font-weight: 600; }
 
 /* ---------- Contact ---------- */
 .contact-lead { color: var(--muted); margin-top: 16px; }
