@@ -144,7 +144,7 @@
     });
 
     // spotlight-only (no tilt) for larger blocks
-    document.querySelectorAll(".project-featured, .contact-link, .edu-card, .cert-card").forEach(function (el) {
+    document.querySelectorAll(".project-featured, .contact-card-inner, .contact-link, .edu-card, .cert-card").forEach(function (el) {
       el.classList.add("spotlight");
       el.addEventListener("mousemove", function (e) {
         const r = el.getBoundingClientRect();
@@ -153,8 +153,8 @@
       });
     });
 
-    /* ---- Magnetic buttons ---- */
-    document.querySelectorAll(".btn, .nav-cta").forEach(function (btn) {
+    /* ---- Magnetic buttons (skip full-width form button) ---- */
+    document.querySelectorAll(".btn:not(.form-submit), .nav-cta").forEach(function (btn) {
       btn.addEventListener("mousemove", function (e) {
         const r = btn.getBoundingClientRect();
         const mx = e.clientX - r.left - r.width / 2;
@@ -171,30 +171,45 @@
     const status = document.getElementById("formStatus");
     const note = document.getElementById("formNote");
     const btn = form.querySelector('button[type="submit"]');
+    const success = document.getElementById("formSuccess");
+    const successMsg = document.getElementById("successMsg");
+    const resetBtn = document.getElementById("formReset");
+    const btnLabel = btn ? btn.querySelector("span") : null;
 
-    function setStatus(type, html) {
+    function showError(html) {
       if (!status) return;
-      status.className = "form-status show " + type;
+      status.className = "form-status show error";
       status.innerHTML = html;
+    }
+    function setBtn(text) { if (btnLabel) btnLabel.textContent = text; else if (btn) btn.textContent = text; }
+
+    if (resetBtn && success) {
+      resetBtn.addEventListener("click", function () {
+        success.classList.remove("show");
+        setBtn("Send message");
+        if (btn) btn.disabled = false;
+        if (note) note.style.display = "";
+      });
     }
 
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(form).entries());
 
+      if (status) status.className = "form-status"; // clear old error
       if (!data.name || !data.email) {
-        setStatus("error", "Please add your name and email so Smile can reply.");
+        showError("Please add your name and email so Smile can reply.");
         return;
       }
 
-      const original = btn ? btn.textContent : "";
-      if (btn) { btn.textContent = "Sending…"; btn.disabled = true; }
+      setBtn("Sending…");
+      if (btn) btn.disabled = true;
       if (note) note.style.display = "none";
 
       // Not configured yet? Fail gracefully with a direct-email fallback.
       if ((data.access_key || "").indexOf("YOUR_ACCESS_KEY") !== -1) {
-        setStatus("error", "The form isn't connected yet — grab a free key at web3forms.com. Meanwhile, email me at <strong>smileshelley270702@gmail.com</strong>.");
-        if (btn) { btn.textContent = original; btn.disabled = false; }
+        showError("The form isn't connected yet — grab a free key at web3forms.com. Meanwhile, email me at <strong>smileshelley270702@gmail.com</strong>.");
+        setBtn("Send message"); if (btn) btn.disabled = false;
         return;
       }
 
@@ -206,13 +221,17 @@
         });
         const json = await res.json().catch(function () { return {}; });
         if (!res.ok || json.success === false) throw new Error(json.message || "failed");
-        setStatus("success",
-          "Thanks, <strong>" + (data.name || "there") + "</strong>! 🎉 Your message is on its way to Smile. You'll hear back soon.");
+
+        if (successMsg) {
+          successMsg.innerHTML = "Thanks, <strong>" + (data.name || "there") +
+            "</strong> — your message is on its way to Smile. You'll hear back soon.";
+        }
         form.reset();
-        if (btn) { btn.textContent = "Sent ✓"; }
+        if (success) success.classList.add("show");
+        else showError("Sent ✓");
       } catch (err) {
-        setStatus("error", "Hmm, that didn't go through. Please email me directly at <strong>smileshelley270702@gmail.com</strong>.");
-        if (btn) { btn.textContent = original; btn.disabled = false; }
+        showError("Hmm, that didn't go through. Please email me directly at <strong>smileshelley270702@gmail.com</strong>.");
+        setBtn("Send message"); if (btn) btn.disabled = false;
       }
     });
   }
