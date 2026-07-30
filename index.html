@@ -397,9 +397,38 @@
         <p class="contact-lead">Have a role, a project, or just want to talk AI and systems? Drop me a line — I read every message.</p>
       </div>
 
-      <div class="contact-cta reveal">
-        <a href="mailto:smileshelley270702@gmail.com" class="btn btn-primary" data-cursor="hover">Say hello ✦</a>
-      </div>
+      <!-- Web3Forms: get a free access key at https://web3forms.com (just enter your email).
+           Paste it into the access_key value below. The key is a public identifier — safe to
+           commit; it is NOT a password. Enable "Autoresponse" in the Web3Forms dashboard to send
+           the visitor a thank-you confirmation automatically. -->
+      <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New message from your portfolio ✦" />
+        <input type="hidden" name="from_name" value="Smile Sharma Portfolio" />
+        <!-- honeypot: bots tick this; humans never see it -->
+        <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off" />
+        <div class="field">
+          <input type="text" name="name" id="name" required placeholder=" " />
+          <label for="name">Your name</label>
+        </div>
+        <div class="field">
+          <input type="email" name="email" id="email" required placeholder=" " />
+          <label for="email">Your email</label>
+        </div>
+        <div class="field">
+          <textarea name="message" id="message" rows="3" placeholder=" "></textarea>
+          <label for="message">A bit about you / why you're reaching out</label>
+        </div>
+        <div class="field">
+          <textarea name="question" id="question" rows="3" placeholder=" "></textarea>
+          <label for="question">Any question you'd like to drop for Smile?</label>
+        </div>
+        <button type="submit" class="btn btn-primary" data-cursor="hover">Send message →</button>
+        <p class="form-note" id="formNote">No spam, ever — this goes straight to Smile's inbox ✦</p>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+
+      <p class="contact-or reveal">or reach me directly</p>
 
       <div class="contact-links reveal">
         <a href="mailto:smileshelley270702@gmail.com" class="contact-link" data-cursor="hover">

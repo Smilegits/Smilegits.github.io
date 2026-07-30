@@ -14,7 +14,20 @@ smile-sharma-portfolio/
 └── README.md
 ```
 
-The **Contact** section is a clean set of links — email, phone, LinkedIn, GitHub, and a résumé download. The "Say hello" button and email link open the visitor's mail app addressed to you. No form, no servers, nothing to maintain.
+The **Contact** section has a form (powered by **Web3Forms** — no backend, no secrets) plus direct links (email, phone, LinkedIn, GitHub, résumé).
+
+---
+
+## Activate the contact form (2 minutes, free)
+
+The form posts to **Web3Forms**, which emails you each submission and can auto-reply to the visitor. The access key is a *public identifier* (like an email address), **not a password** — safe to keep in the code.
+
+1. Go to **https://web3forms.com** → enter your email (`smileshelley270702@gmail.com`) → they email you an **Access Key**.
+2. In `index.html`, find `value="YOUR_ACCESS_KEY"` and replace `YOUR_ACCESS_KEY` with your key.
+3. (Optional) To send visitors a "thanks for reaching out" confirmation automatically, open your **Web3Forms dashboard → Autoresponse**, turn it on, and write the message.
+4. Commit + push (see below). Test it by submitting the form on your live site — the message lands in your inbox.
+
+Until the key is added, the form gracefully tells visitors to email you directly, so nothing looks broken.
 
 ---
 

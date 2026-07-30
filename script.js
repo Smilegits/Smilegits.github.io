@@ -165,4 +165,56 @@
     });
   }
 
+  /* ---- Contact form → Web3Forms (no backend, no secrets) ---- */
+  const form = document.getElementById("contactForm");
+  if (form) {
+    const status = document.getElementById("formStatus");
+    const note = document.getElementById("formNote");
+    const btn = form.querySelector('button[type="submit"]');
+
+    function setStatus(type, html) {
+      if (!status) return;
+      status.className = "form-status show " + type;
+      status.innerHTML = html;
+    }
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      if (!data.name || !data.email) {
+        setStatus("error", "Please add your name and email so Smile can reply.");
+        return;
+      }
+
+      const original = btn ? btn.textContent : "";
+      if (btn) { btn.textContent = "Sending…"; btn.disabled = true; }
+      if (note) note.style.display = "none";
+
+      // Not configured yet? Fail gracefully with a direct-email fallback.
+      if ((data.access_key || "").indexOf("YOUR_ACCESS_KEY") !== -1) {
+        setStatus("error", "The form isn't connected yet — grab a free key at web3forms.com. Meanwhile, email me at <strong>smileshelley270702@gmail.com</strong>.");
+        if (btn) { btn.textContent = original; btn.disabled = false; }
+        return;
+      }
+
+      try {
+        const res = await fetch(form.getAttribute("action"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json().catch(function () { return {}; });
+        if (!res.ok || json.success === false) throw new Error(json.message || "failed");
+        setStatus("success",
+          "Thanks, <strong>" + (data.name || "there") + "</strong>! 🎉 Your message is on its way to Smile. You'll hear back soon.");
+        form.reset();
+        if (btn) { btn.textContent = "Sent ✓"; }
+      } catch (err) {
+        setStatus("error", "Hmm, that didn't go through. Please email me directly at <strong>smileshelley270702@gmail.com</strong>.");
+        if (btn) { btn.textContent = original; btn.disabled = false; }
+      }
+    });
+  }
+
 })();
