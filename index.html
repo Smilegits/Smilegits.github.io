@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smile Sharma — Software Engineer & AI Builder</title>
+  <meta name="description" content="Smile Sharma — Software Engineer at UKG. AI / GenAI builder, distributed systems, and full-stack developer. Designing from idea to deployment." />
+  <meta name="author" content="Smile Sharma" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Smile Sharma — Software Engineer & AI Builder" />
+  <meta property="og:description" content="AI / GenAI builder, distributed systems engineer, full-stack developer. From idea to deployment." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photo.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated gradient background + noise -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-name">SMILE SHARMA</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" data-cursor="hover">S<span>✦</span>S</a>
+    <nav class="nav-links">
+      <a href="#about" data-cursor="hover">About</a>
+      <a href="#experience" data-cursor="hover">Experience</a>
+      <a href="#work" data-cursor="hover">Work</a>
+      <a href="#skills" data-cursor="hover">Skills</a>
+      <a href="#contact" data-cursor="hover">Contact</a>
+    </nav>
+    <a href="assets/resume.pdf" class="nav-cta" download data-cursor="hover">Résumé ↓</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/resume.pdf" download class="mm-cta">Download Résumé ↓</a>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal">✦ Software Engineer · AI / GenAI Builder · Noida, India</p>
+        <h1 class="hero-title">
+          <span class="line"><span>SMILE</span></span>
+          <span class="line"><span>SHARMA</span></span>
+        </h1>
+        <div class="hero-rotator reveal" aria-hidden="true">
+          <span class="rot-static">I'm a</span>
+          <span class="rot-words">
+            <b>Software Engineer</b>
+            <b>GenAI Builder</b>
+            <b>Systems Architect</b>
+            <b>Full-Stack Dev</b>
+            <b>Problem Solver</b>
+          </span>
+        </div>
+        <p class="hero-sub reveal">
+          I build things end to end — from <em>idea</em> and <em>design</em> to
+          <em>deployment</em>. Distributed systems, generative AI, and interfaces
+          people actually enjoy using.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn btn-primary" data-cursor="hover">View my work</a>
+          <a href="#contact" class="btn btn-ghost" data-cursor="hover">Get in touch</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div><strong data-count="99.9" data-suffix="%">0</strong><span>Pipeline reliability</span></div>
+          <div><strong data-count="50" data-suffix="%">0</strong><span>Efficiency gained</span></div>
+          <div><strong data-count="6" data-suffix="">0</strong><span>Microservices, 1 platform</span></div>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <img src="assets/photo.jpg" alt="Smile Sharma" />
+          <div class="photo-ring"></div>
+        </div>
+        <div class="photo-badge">Hi, I'm Smile 👋</div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span>scroll</span><i></i></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Generative AI</span><span>✦</span><span>Distributed Systems</span><span>✦</span>
+        <span>Spring Boot</span><span>✦</span><span>Kafka</span><span>✦</span><span>Python</span><span>✦</span>
+        <span>Microservices</span><span>✦</span><span>LLMs</span><span>✦</span><span>Azure OpenAI</span><span>✦</span>
+        <span>React</span><span>✦</span><span>Kubernetes</span><span>✦</span>
+        <span>Generative AI</span><span>✦</span><span>Distributed Systems</span><span>✦</span>
+        <span>Spring Boot</span><span>✦</span><span>Kafka</span><span>✦</span><span>Python</span><span>✦</span>
+        <span>Microservices</span><span>✦</span><span>LLMs</span><span>✦</span><span>Azure OpenAI</span><span>✦</span>
+        <span>React</span><span>✦</span><span>Kubernetes</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="section-head reveal">
+        <span class="tag">01 — About</span>
+        <h2>The engineer behind the code.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <img src="assets/photo.jpg" alt="Smile Sharma" />
+        </div>
+        <div class="about-copy">
+          <p class="reveal">
+            I'm <strong>Smile Sharma</strong>, a Software Engineer at
+            <strong>UKG (Ultimate Kronos Group)</strong> and an
+            Information Technology graduate from
+            <strong>Dr. B. R. Ambedkar National Institute of Technology</strong>.
+            I love the whole arc of building software — sitting with a fuzzy
+            problem, shaping a clean architecture, and shipping it to production
+            where real people rely on it.
+          </p>
+          <p class="reveal">
+            My happy place is where <strong>distributed systems meet generative
+            AI</strong>: Kafka pipelines that never drop a message, RAG platforms
+            that spend tokens like they're precious, and services instrumented so
+            well you can watch cost and latency breathe in real time. I think of
+            myself as a <strong>unified developer</strong> — comfortable owning a
+            feature from design through backend, frontend, and deployment.
+          </p>
+          <p class="reveal">
+            Outside of work you'll usually find me
+            <strong>grinding DSA problems</strong>, sketching system designs on
+            whatever paper is nearby, or turning a weekend idea into a working
+            prototype. I believe good engineering is equal parts rigor and
+            curiosity — and I bring both.
+          </p>
+          <div class="about-facts reveal">
+            <div><span>Now</span>Software Engineer @ UKG</div>
+            <div><span>Based in</span>Noida, India</div>
+            <div><span>Focus</span>AI · GenAI · Distributed Systems</div>
+            <div><span>Degree</span>B.Tech IT · CGPA 8.09</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience" id="experience">
+      <div class="section-head reveal">
+        <span class="tag">02 — Experience</span>
+        <h2>Where I've been building.</h2>
+      </div>
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">
+            <span class="tl-date">Aug 2024 — Present</span>
+            <span class="tl-loc">Noida, India</span>
+          </div>
+          <div class="tl-body">
+            <h3>Software Engineer <span>· UKG (Ultimate Kronos Group)</span></h3>
+            <p class="tl-role">Distributed systems · AI/GenAI · Full-stack · Idea → Deployment</p>
+            <ul>
+              <li>Designed distributed data pipelines with <strong>RabbitMQ &amp; Cassandra</strong> to process high-volume payroll metrics for healthcare analytics at <strong>99.9% reliability</strong>.</li>
+              <li>Built <strong>Spring Boot &amp; Java microservices</strong> managing contract-employee data for hospital systems, with RESTful APIs integrated into enterprise payroll platforms.</li>
+              <li>Architected automated workflows and <strong>CI/CD pipelines</strong> that cut execution time from <strong>2–3 days to 10 hours</strong> — a 40–50% efficiency gain.</li>
+              <li>Delivered scalable <strong>Healthcare Analytics</strong> reporting modules in Python &amp; SQL, surfacing patient-volume and performance insights for data-driven decisions.</li>
+              <li>Engineered a high-performance <strong>data purger framework</strong> in Spring Boot to archive and clean large datasets — improving performance, storage, and compliance.</li>
+              <li>Explored <strong>AI &amp; Generative AI</strong> internally as a unified developer, owning features across design, backend, frontend, and deployment in Agile teams.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-meta">
+            <span class="tl-date">Internship</span>
+            <span class="tl-loc">GKMT IT</span>
+          </div>
+          <div class="tl-body">
+            <h3>Frontend Developer <span>· GKMT IT (Internship)</span></h3>
+            <p class="tl-role">React · JavaScript · Responsive UI</p>
+            <ul>
+              <li>Built responsive, component-driven interfaces and translated designs into pixel-accurate, accessible web pages.</li>
+              <li>Collaborated with the team on real product features, learning professional Git workflows and code-review culture early.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section class="section work" id="work">
+      <div class="section-head reveal">
+        <span class="tag">03 — Selected Work</span>
+        <h2>Projects I'm proud of.</h2>
+      </div>
+
+      <!-- Featured: Aperture -->
+      <article class="project-featured reveal" data-cursor="hover">
+        <div class="pf-left">
+          <span class="pf-flag">★ Featured Platform</span>
+          <h3>Aperture</h3>
+          <p class="pf-tag">Token-Efficient Document Intelligence Platform</p>
+          <p class="pf-desc">
+            A multi-tenant <strong>RAG platform</strong> spread across
+            <strong>6 polyglot microservices</strong>, built to be brilliant with
+            documents and stingy with tokens.
+          </p>
+          <ul class="pf-points">
+            <li><strong>Kafka-driven ingestion</strong> processing N-page corpora with idempotent consumers, dead-letter queues, and replay-based reindexing.</li>
+            <li>Cut LLM token cost per query with a <strong>version-tagged Redis semantic cache</strong>, cross-encoder reranking + sentence-level context compression, and a <strong>confidence-gated model cascade</strong> resolving most queries on the cheap tier.</li>
+            <li>Per-tenant <strong>token &amp; cost ledger</strong> in PostgreSQL with budget enforcement, plus a CI-integrated eval harness scoring faithfulness &amp; context precision on a 150-question golden set.</li>
+            <li>End-to-end <strong>OpenTelemetry</strong> tracing across Java &amp; Python with <strong>Prometheus/Grafana</strong> dashboards for cost, cache hit rate, and p95 latency.</li>
+          </ul>
+          <div class="pf-stack">
+            <span>Java</span><span>Spring Boot</span><span>Python</span><span>Kafka</span>
+            <span>Redis</span><span>PostgreSQL</span><span>MongoDB</span><span>Kubernetes</span>
+          </div>
+        </div>
+        <div class="pf-right">
+          <div class="pf-visual">
+            <div class="pf-node n1">Ingest</div>
+            <div class="pf-node n2">Embed</div>
+            <div class="pf-node n3">Cache</div>
+            <div class="pf-node n4">Rerank</div>
+            <div class="pf-node n5">LLM</div>
+            <svg class="pf-lines" viewBox="0 0 200 200" preserveAspectRatio="none">
+              <path d="M40,30 C100,30 100,100 160,100" />
+              <path d="M40,100 C100,100 100,100 160,100" />
+              <path d="M40,170 C100,170 100,100 160,100" />
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card reveal" data-cursor="hover">
+          <div class="pc-top"><span class="pc-num">02</span><span class="pc-arrow">↗</span></div>
+          <h3>Generative AI Chatbot</h3>
+          <p class="pc-tag">Gemini Pro · PyTorch · Streamlit</p>
+          <p class="pc-desc">
+            An interactive GenAI chatbot on <strong>Google's Gemini Pro</strong>
+            with context-aware responses, optimized prompt engineering for
+            low-latency real-time chat, and Python-based conversation-history &amp;
+            state management over Transformer architectures.
+          </p>
+          <div class="pc-stack"><span>Python</span><span>Gemini</span><span>Streamlit</span><span>LLMs</span></div>
+        </article>
+
+        <article class="project-card reveal" data-cursor="hover">
+          <div class="pc-top"><span class="pc-num">03</span><span class="pc-arrow">↗</span></div>
+          <h3>Dynamic Blog Application</h3>
+          <p class="pc-tag">React.js · REST APIs · Responsive</p>
+          <p class="pc-desc">
+            A full-stack blog with complete <strong>CRUD</strong> and a responsive
+            UI. Built with <strong>React Router</strong> for client-side routing and
+            custom hooks for efficient data fetching — component-based architecture
+            and clean state management throughout.
+          </p>
+          <div class="pc-stack"><span>React</span><span>JavaScript</span><span>REST</span><span>UI/UX</span></div>
+        </article>
+
+        <article class="project-card reveal dsa-card" data-cursor="hover">
+          <div class="pc-top"><span class="pc-num">04</span><span class="pc-arrow">↗</span></div>
+          <h3>DSA &amp; Problem Solving</h3>
+          <p class="pc-tag">Data Structures · Algorithms · System Design</p>
+          <p class="pc-desc">
+            A constant habit, not a project — I keep sharp by solving
+            <strong>data structures &amp; algorithms</strong> problems and sketching
+            system designs. It's where clean, efficient instincts come from.
+          </p>
+          <div class="pc-code">
+            <code><span class="c-key">while</span> (curious) {<br />&nbsp;&nbsp;solve(problem);<br />&nbsp;&nbsp;<span class="c-key">learn</span>();<br />}</code>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section skills" id="skills">
+      <div class="section-head reveal">
+        <span class="tag">04 — Toolkit</span>
+        <h2>Technologies I work with.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h4>Languages</h4>
+          <div class="chips"><span>Python</span><span>Java</span><span>C++</span><span>C</span><span>C#</span><span>JavaScript (ES6+)</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>AI / ML &amp; GenAI</h4>
+          <div class="chips"><span>Generative AI</span><span>LLMs</span><span>PyTorch</span><span>TensorFlow</span><span>Transformers</span><span>Prompt Engineering</span><span>Model Inference</span><span>Azure OpenAI</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Cloud</h4>
+          <div class="chips"><span>Azure AI</span><span>Azure ML</span><span>AWS (EC2·S3·Lambda)</span><span>GCP · Vertex AI</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Distributed Systems</h4>
+          <div class="chips"><span>Microservices</span><span>Kafka</span><span>RabbitMQ</span><span>Cassandra</span><span>Redis</span><span>System Design</span><span>REST APIs</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>DevOps &amp; CI/CD</h4>
+          <div class="chips"><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>GitHub Actions</span><span>CI/CD</span><span>Git</span><span>Agile/Scrum</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Frameworks &amp; Data</h4>
+          <div class="chips"><span>Spring Boot</span><span>Spring Framework</span><span>React.js</span><span>Node.js</span><span>Gradle</span><span>MySQL</span><span>MongoDB</span><span>Astra DB</span><span>SQL</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION + ACHIEVEMENTS + CERTS -->
+    <section class="section extras" id="extras">
+      <div class="extras-grid">
+        <div class="extra-col reveal">
+          <span class="tag">05 — Education</span>
+          <div class="edu-card">
+            <h3>Dr. B. R. Ambedkar National Institute of Technology</h3>
+            <p class="edu-deg">B.Tech, Information Technology</p>
+            <div class="edu-meta"><span>Jalandhar, India</span><span>2020 — 2024</span><span class="edu-cgpa">CGPA 8.09</span></div>
+          </div>
+          <div class="edu-card">
+            <h3>Manu Vatika School</h3>
+            <p class="edu-deg">Class XII</p>
+            <div class="edu-meta"><span>Achievement</span><span class="edu-cgpa">95.6%</span></div>
+          </div>
+        </div>
+
+        <div class="extra-col reveal">
+          <span class="tag">06 — Certifications</span>
+          <p class="cert-note">Selected certifications — full list on
+            <a href="https://www.linkedin.com/in/smilesharma27/details/certifications/" target="_blank" rel="noopener" data-cursor="hover">LinkedIn ↗</a>
+          </p>
+          <!-- EDIT ME: replace these with your real certificates & short blurbs -->
+          <div class="cert-card">
+            <h4>Generative AI &amp; LLMs</h4>
+            <p>Foundations of large language models, prompt engineering, and building real GenAI applications end to end.</p>
+          </div>
+          <div class="cert-card">
+            <h4>Microsoft Azure — AI Services</h4>
+            <p>Working with Azure OpenAI Service and Azure ML to deploy and operate AI workloads in the cloud.</p>
+          </div>
+          <div class="cert-card">
+            <h4>Java &amp; Spring Boot</h4>
+            <p>Building production-grade microservices, RESTful APIs, and scalable backend systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="section-head reveal center">
+        <span class="tag">07 — Contact</span>
+        <h2>Let's build something.</h2>
+        <p class="contact-lead">Have a role, a project, or just want to talk AI and systems? Drop me a line — I read every message.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Posts to your Vercel serverless function (api/contact.js). It stores the
+             submission in MongoDB Atlas, emails the visitor an auto-reply, and notifies you.
+             ⚠️ Replace YOUR-VERCEL-APP below with your real Vercel domain after deploying. -->
+        <form class="contact-form reveal" id="contactForm" action="https://YOUR-VERCEL-APP.vercel.app/api/contact" method="POST">
+          <p class="hidden-field"><label>Leave this empty: <input name="_gotcha" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="field">
+            <input type="text" name="name" id="name" required placeholder=" " />
+            <label for="name">Your name</label>
+          </div>
+          <div class="field">
+            <input type="email" name="email" id="email" required placeholder=" " />
+            <label for="email">Your email</label>
+          </div>
+          <div class="field">
+            <textarea name="message" id="message" rows="3" placeholder=" "></textarea>
+            <label for="message">A bit about you / why you're reaching out</label>
+          </div>
+          <div class="field">
+            <textarea name="question" id="question" rows="3" placeholder=" "></textarea>
+            <label for="question">Any question you'd like to drop for Smile?</label>
+          </div>
+          <button type="submit" class="btn btn-primary" data-cursor="hover">Send message →</button>
+          <p class="form-note" id="formNote">You'll get an instant confirmation email with your details ✦</p>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+
+        <aside class="contact-side reveal">
+          <a href="mailto:smileshelley270702@gmail.com" class="contact-link" data-cursor="hover">
+            <span>Email</span>smileshelley270702@gmail.com
+          </a>
+          <a href="tel:+918741865218" class="contact-link" data-cursor="hover">
+            <span>Phone</span>+91 87418 65218
+          </a>
+          <a href="https://www.linkedin.com/in/smilesharma27/" target="_blank" rel="noopener" class="contact-link" data-cursor="hover">
+            <span>LinkedIn</span>/in/smilesharma27 ↗
+          </a>
+          <a href="https://github.com/Smilegits" target="_blank" rel="noopener" class="contact-link" data-cursor="hover">
+            <span>GitHub</span>@Smilegits ↗
+          </a>
+          <a href="assets/resume.pdf" download class="contact-link resume-link" data-cursor="hover">
+            <span>Résumé</span>Download PDF ↓
+          </a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-big" aria-hidden="true">SMILE SHARMA</div>
+    <div class="footer-row">
+      <span>© <span id="year"></span> Smile Sharma — Noida, India</span>
+      <span>Designed &amp; built from idea to deployment ✦</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
